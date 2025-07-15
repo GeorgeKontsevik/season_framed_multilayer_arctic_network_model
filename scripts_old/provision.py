@@ -192,7 +192,8 @@ def calculate_graph_provision(G, service_radius, const_base_demand, service_name
                                              weight=total_weight,
                                              assignment=flow,
                                              path=path,
-                                             is_service_flow=True)
+                                             is_service_flow=True,
+                                             is_within=True if total_weight <= service_radius else False)
                     
                     # Mark edges along physical path as service routes
                     for k in range(len(path)-1):
