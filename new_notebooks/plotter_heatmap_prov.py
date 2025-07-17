@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import scienceplots  # Assuming this is the scicolor import
+import scicolor  # Assuming this is the scicolor import
 from typing import List, Optional, Tuple, Union
 import numpy as np
 
@@ -154,7 +154,7 @@ def create_provision_heatmap(pivot_data: pd.DataFrame,
     
     # Get colormap - handle different science plot versions
     try:
-        cmap = scienceplots.get_cmap(colormap)
+        cmap = scicolor.get_cmap(colormap)
     except AttributeError:
         cmap = colormap
     

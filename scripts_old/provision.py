@@ -211,6 +211,7 @@ def calculate_graph_provision(G, service_radius, const_base_demand, service_name
             'provision': result.loc[data['name'], 'provision'],
             'demand_within': result.loc[data['name'], 'demand_within'],
             'demand_without': result.loc[data['name'], 'demand_without'],
+            'demand': result.loc[data['name'], 'demand'],
             'capacity_left': result.loc[data['name'], 'capacity_left']
         }
         for node, data in G_with_assignments.nodes(data=True)
