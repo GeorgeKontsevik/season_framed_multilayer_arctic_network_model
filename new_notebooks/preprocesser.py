@@ -7,13 +7,13 @@ from transliterate import translit
 
 from constants import MINUTES_IN_HOUR
 
-def get_data(data_path, SETTL_NAME, transport_mode_name_mapper, transport_modes, SERVICE_NAME):
-    settl = gpd.read_file(data_path + f"df_settlements_{SETTL_NAME}.geojson")
+def get_data(data_path, SETTL_NAME, transport_mode_name_mapper, transport_modes, SERVICE_NAME, specific_folder='processed/'):
+    settl = gpd.read_file(data_path + specific_folder+f"df_settlements_{SETTL_NAME}.geojson")
     settl["name"] = settl["name"].str.replace("ё", "е")
     settl.geometry = settl.geometry.buffer(1e3)
 
     transport_df = (
-        gpd.read_file(data_path + f"df_time_{SETTL_NAME}.geojson")
+        gpd.read_file(data_path + specific_folder + f"df_time_{SETTL_NAME}.geojson")
         .dropna(subset=["geometry"])
         .reset_index(drop=True)
     )
@@ -54,11 +54,11 @@ def get_data(data_path, SETTL_NAME, transport_mode_name_mapper, transport_modes,
     transport_df[transport_modes] *= MINUTES_IN_HOUR  # convert from hours to minutes
     transport_df[transport_modes] = transport_df[transport_modes].round(0)
 
-    infr_df = pd.read_csv(data_path + f"infrastructure_{SETTL_NAME}.csv", sep=";")
+    infr_df = pd.read_csv(data_path + specific_folder + f"infrastructure_{SETTL_NAME}.csv", sep=";")
     infr_df.fillna(0, inplace=True)
     infr_df["name"] = infr_df["name"].str.replace("ё", "е")
 
-    df_service = gpd.read_file(data_path + f"df_{SERVICE_NAME}_{SETTL_NAME}.geojson")
+    df_service = gpd.read_file(data_path + specific_folder + f"df_{SERVICE_NAME}_{SETTL_NAME}.geojson")
     df_service["name"] = df_service["name"].str.replace("ё", "е")
 
     transport_df["edge1"] = transport_df["edge1"].apply(

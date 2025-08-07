@@ -4,7 +4,7 @@ threshold = 0.55
 DEMAND_COL = "demand_without"
 KELVIN_TO_CELSIUS = 273.15
 CONST_BASE_DEMAND = 120  # if not known (!)
-SERVICE_RADIUS_MINUTES = 60 * 13
+# SERVICE_RADIUS_MINUTES = 60 * 13
 MINUTES_IN_HOUR = 60
 MERCATOR_CRS = 3857
 START_YEAR = 1982
@@ -25,6 +25,13 @@ transport_modes_color = {
     "Water transport": "#B48EAD",
     # "Winter road (regular)": "#A3BE8C",
     # "Water transport (ship)": "#B48EAD",
+}
+
+service_radius_minutes = {
+    "yakut_chuk":MINUTES_IN_HOUR*3,
+    "yanao_kras":MINUTES_IN_HOUR*1.5,
+    "mezen":MINUTES_IN_HOUR*1,
+    "nao":MINUTES_IN_HOUR*3
 }
 
 # # Пороговые температуры
@@ -83,3 +90,20 @@ service_list = [
         "pristan",]
 
 settl_list = ["yanao_kras","mezen","yakut_chuk"]
+
+
+
+# Service colors with better contrast
+SERVICE_COLORS = {
+    "school": "#e74c3c",
+    "kindergarten": "#f39c12",
+    "health": "#3498db",
+    "post": "#2ecc71",
+    "library": "#8b4513",
+    "culture": "#9b59b6",
+    "shop": "#ff1493",
+    "atm": "#708090",
+    "airport": "#00bcd4",
+    "port": "#ffd700",
+    "pristan": "#ff69b4",
+}
