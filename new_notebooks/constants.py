@@ -77,19 +77,19 @@ month_order = [
 data_path = "../data/processed/"
 
 service_list = [
-        "school",
-        "kindergarten",
+        # "school",
+        # "kindergarten",
         "post",
-        "library",
+        # "library",
         "culture",
-        "atm",
+        # "atm",
         "health",
         "port",
         "airport",
-        "shop",
+        # "shop",
         "pristan",]
 
-settl_list = ["yanao_kras","mezen","yakut_chuk"]
+settl_list = ["yanao_kras","mezen","yakut_chuk", "nao"]
 
 
 

@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
-from constants import SERVICE_COLORS
+from constants import SERVICE_COLORS, month_order
 
 def plot_multilayer_network(
     all_results, settl_name, service_list, month=5, figsize=(15, 30)
@@ -152,7 +152,7 @@ def plot_multilayer_network(
         ax.text(
             -20,
             1,
-            z - 4.5,
+            z - 2.3,
             service,
             fontsize=12,
             weight="bold",
@@ -194,7 +194,7 @@ def plot_multilayer_network(
     ax.set_ylim(-8, 8)
 
     # Add title and remove axes
-    plt.title("Multilayer Service Network", fontsize=16, weight="bold", y=0.93)
+    plt.title(f"Multilayer Service Network\n {month_order[month]} | {settl_name}", fontsize=16, weight="bold", y=0.93)
     ax.set_axis_off()
 
     plt.tight_layout()

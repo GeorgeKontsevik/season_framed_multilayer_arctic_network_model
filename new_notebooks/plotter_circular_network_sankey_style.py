@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 
-def plot_circular_network_sankey_style(g, service_name, min_flow=1):
+def plot_circular_network_sankey_style(g, service_name, month_name, min_flow=1):
     """
     Create a circular network plot that matches the Sankey data processing exactly
     Cities are represented as flat segments along the circle perimeter
@@ -438,7 +438,7 @@ def plot_circular_network_sankey_style(g, service_name, min_flow=1):
     # Step 7: Update layout
     fig.update_layout(
         title=dict(
-            text=f"{service_name.title()}",
+            text=f"{month_name} | {service_name.title()}",
             font=dict(size=18, family="Arial", color="#2c3e50"),
             x=0.5,
             xanchor="center",
@@ -470,8 +470,8 @@ def plot_circular_network_sankey_style(g, service_name, min_flow=1):
         plot_bgcolor="#f8f9fa",
         paper_bgcolor="white",
         font=dict(family="Arial", size=12, color="#2c3e50"),
-        width=700,
-        height=700,
+        width=1000,
+        height=1000,
     )
 
     return fig

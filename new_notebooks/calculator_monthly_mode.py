@@ -129,7 +129,7 @@ def create_monthly_transport_analysis(
     # Extract time dimension
     sample_node = list(G.nodes(data=True))[0]
     T = sample_node[1][temperature_field].shape[0]
-    n_years = T // months_in_year
+    # n_years = T // months_in_year
     
     records = []
     
@@ -226,8 +226,8 @@ def create_transport_monthly_analysis_fixed(
     sample_node = list(G_undirected.nodes(data=True))[0]
     T = sample_node[1]["temperature"].shape[0]
     n_years = T // MONTHS_IN_YEAR
-    years = list(range(START_YEAR, START_YEAR + n_years))
-    months = list(range(1, MONTHS_IN_YEAR + 1))
+    # years = list(range(START_YEAR, START_YEAR + n_years))
+    # months = list(range(1, MONTHS_IN_YEAR + 1))
     
     records = []
     
@@ -300,21 +300,21 @@ def debug_temperature_analysis(G: nx.Graph, operational_ranges: Dict[str, List[T
         operational_ranges: Operational ranges for transport modes
         time_index: Time index to analyze
     """
-    print(f"Debug analysis for time index {time_index}:")
-    print(f"Operational ranges: {operational_ranges}")
-    print()
+    # print(f"Debug analysis for time index {time_index}:")
+    # print(f"Operational ranges: {operational_ranges}")
+    # print()
     
     # Sample a few nodes
     sample_nodes = list(G.nodes(data=True))[:5]
     
     for node_id, data in sample_nodes:
         temp = data["temperature"].values[time_index]
-        print(f"Node {node_id}: Temperature = {temp:.1f}°C")
+        # print(f"Node {node_id}: Temperature = {temp:.1f}°C")
         
         for mode, ranges in operational_ranges.items():
             is_operational = is_temperature_in_operational_ranges(temp, ranges)
             print(f"  {mode}: {'OPERATIONAL' if is_operational else 'non-operational'}")
-        print()
+        # print()
     
     # Count totals
     mode_counts = count_operational_nodes_by_mode(G, time_index, operational_ranges)
@@ -328,14 +328,14 @@ def create_df_modes_monthly_fixed(G_undirected, transport_modes, threshold_tempe
     """
     Legacy wrapper that handles both old threshold format and new operational ranges format
     """
-    print(f"Input threshold_temperatures: {threshold_temperatures}")
+    # print(f"Input threshold_temperatures: {threshold_temperatures}")
     
     # Check if threshold_temperatures is already in operational ranges format
     sample_value = next(iter(threshold_temperatures.values()))
     
     if isinstance(sample_value, list) and len(sample_value) > 0 and isinstance(sample_value[0], (tuple, list)):
         # Already in operational ranges format: {'mode': [(temp_from, temp_to), ...]}
-        print("Detected operational ranges format - using directly")
+        # print("Detected operational ranges format - using directly")
         operational_ranges = {}
         
         for mode, ranges in threshold_temperatures.items():
@@ -349,7 +349,7 @@ def create_df_modes_monthly_fixed(G_undirected, transport_modes, threshold_tempe
             
     else:
         # Old format: {'mode': threshold_value} - convert to ranges
-        print("Detected threshold values format - converting to ranges")
+        # print("Detected threshold values format - converting to ranges")
         operational_ranges = {}
         
         for mode, thresh in threshold_temperatures.items():
@@ -370,7 +370,7 @@ def create_df_modes_monthly_fixed(G_undirected, transport_modes, threshold_tempe
                 # Other modes work above threshold (this is oversimplified)
                 operational_ranges[mode] = [(float(thresh), 100.0)]
     
-    print(f"Final operational_ranges: {operational_ranges}")
+    # print(f"Final operational_ranges: {operational_ranges}")
     
     return create_transport_monthly_analysis_fixed(
         G_undirected, transport_modes, operational_ranges, START_YEAR, MONTHS_IN_YEAR
