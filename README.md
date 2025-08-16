@@ -1,17 +1,20 @@
 ***
 
-# SEASON-FRAMED ARCTIC NETWOKR MODEL
+# SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL
+
+![lab logo](/docs/github_img_lab.jpeg)
+
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC NETWOKR MODEL*](PAPERURL) by [AUTHOR1](AUTHOR1URL), [AUTHOR2](AUTHOR2URL), and [AUTHOR3](AUTHOR3URL). The code SHORTEXPLANATION.
+This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL*](PAPERURL) by [AUTHOR1](AUTHOR1URL), [AUTHOR2](AUTHOR2URL), and [AUTHOR3](AUTHOR3URL). The code SHORTEXPLANATION.
 
 **Preprint**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)  
 **Data repository**: [zenodo.XXXXXXX](https://zenodo.org/record/XXXXXXX)  
 
-[![SEASON-FRAMED ARCTIC NETWOKR MODEL](SPLASHIMAGE.JPG/PNG/GIF)](PROJECTURL)
+[![SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL](SPLASHIMAGE.JPG/PNG/GIF)](PROJECTURL)
 
 ## Installation
 First clone the repository:
