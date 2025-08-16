@@ -1,7 +1,7 @@
 ![lab logo](/docs/github_img_lab.jpeg)
 ***
 
-# SEASONAL MULTILAYER ARCTIC NETWOKR
+# ❄️ SEASONAL MULTILAYER ARCTIC NETWOKR ❄️
 
 
 <!-- [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
