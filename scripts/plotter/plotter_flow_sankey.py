@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-from constants import month_order
+from scripts.preprocesser.constants import month_order
 
 
 def create_clean_sankey(

@@ -7,7 +7,7 @@ from shapely.geometry import Point
 import json
 import requests
 
-from constants import data_path, start_date, end_date, parameters, MERCATOR_CRS
+from scripts.preprocesser.constants import data_path, start_date, end_date, parameters, MERCATOR_CRS
 
 def refine_data(df_climate):
     climate_records = []

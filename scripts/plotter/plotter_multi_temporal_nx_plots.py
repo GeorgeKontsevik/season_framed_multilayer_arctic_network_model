@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib.patches import Polygon, Circle
 import matplotlib.patches as mpatches
 from collections import defaultdict
-from constants import SERVICE_COLORS, service_list, month_order
+from scripts.preprocesser.constants import SERVICE_COLORS, service_list, month_order
 
 import matplotlib.pyplot as plt
 import numpy as np

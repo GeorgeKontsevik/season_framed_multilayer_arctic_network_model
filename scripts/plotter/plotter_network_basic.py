@@ -4,7 +4,7 @@ from matplotlib.collections import PatchCollection
 from shapely.geometry import Polygon, MultiPolygon
 import networkx as nx
 from tqdm import tqdm
-from constants import settl_node_color, transport_modes_color, service_node_color, FONT_SIZE
+from scripts.preprocesser.constants import settl_node_color, transport_modes_color, service_node_color, FONT_SIZE
 
 tqdm.pandas()
 

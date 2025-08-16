@@ -4,7 +4,7 @@ import geopandas as gpd
 import numpy as np
 import math
 
-import scripts.model as model  # Assuming model is a module that contains the calculate_provision function
+import scripts.model.model as model  # Assuming model is a module that contains the calculate_provision function
 
 def calculate_base_demand(population, const_base_demand):
     """Calculate base demand from population with safety checks"""

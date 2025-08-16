@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
-from constants import SERVICE_COLORS, month_order
+from scripts.preprocesser.constants import SERVICE_COLORS, month_order
 
 def plot_multilayer_network(
     all_results, settl_name, service_list, month=5, figsize=(15, 30)

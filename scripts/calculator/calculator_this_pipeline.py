@@ -1,6 +1,6 @@
 from transliterate import translit
-import scripts.model as model
-from constants import MERCATOR_CRS, CONST_BASE_DEMAND
+import scripts.model.model as model
+from scripts.preprocesser.constants import MERCATOR_CRS, CONST_BASE_DEMAND
 
 def fix_missing_capacity(row, service_name):
     """this is just a very straight forward workaround"""

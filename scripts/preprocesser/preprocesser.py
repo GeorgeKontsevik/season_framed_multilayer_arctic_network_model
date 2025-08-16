@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from transliterate import translit
 
-from constants import MINUTES_IN_HOUR
+from scripts.preprocesser.constants import MINUTES_IN_HOUR
 
 def get_data(data_path, SETTL_NAME, transport_mode_name_mapper, transport_modes, SERVICE_NAME, specific_folder='processed/'):
     settl = gpd.read_file(data_path + specific_folder+f"df_settlements_{SETTL_NAME}.geojson")
