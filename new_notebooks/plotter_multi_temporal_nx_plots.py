@@ -48,79 +48,123 @@ plt.rcParams.update({
 
 from collections import defaultdict
 
-def plot_temporal_metrics(temporal_metrics, monthly_communities, figsize=(16, 10)):
+def plot_temporal_metrics(temporal_metrics, monthly_communities, figsize=(18, 5)):
     """
-    Comprehensive visualization of temporal metrics
+    Publication-quality visualization of temporal metrics with enhanced styling
     """
-    fig, axes = plt.subplots(2, 3, figsize=figsize)
+    # Enhanced color palette - more vibrant and modern
+    colors = {
+        'primary': '#0077BE',      # Bright Blue
+        'secondary': '#8E44AD',    # Rich Purple
+        'accent': '#E67E22',       # Vibrant Orange
+        'success': '#E74C3C',      # Bold Red
+        'info': '#9B59B6',         # Deep purple
+        'warning': '#F39C12',      # Golden Yellow
+        'neutral': '#34495E'       # Dark Gray
+    }
     
-    # 1. Jaccard Similarity Timeline
-    ax1 = axes[0, 0]
+    # Create figure with enhanced styling
+    fig = plt.figure(figsize=figsize, facecolor='white')
+    
+    # Enhanced global font properties
+    plt.rcParams.update({
+        'font.family': 'sans-serif',
+        'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
+        'font.size': 11,
+        'font.weight': 'normal',
+        'axes.linewidth': 1.5,
+        'axes.spines.top': False,
+        'axes.spines.right': False,
+        'axes.grid': True,
+        'grid.alpha': 0.25,
+        'grid.linewidth': 1.0,
+        'grid.linestyle': '--',
+        'xtick.direction': 'out',
+        'ytick.direction': 'out',
+        'xtick.major.size': 6,
+        'ytick.major.size': 6,
+        'xtick.color': colors['neutral'],
+        'ytick.color': colors['neutral']
+    })
+    
+    # Create subplot grid with enhanced spacing
+    gs = fig.add_gridspec(1, 3, hspace=0.4, wspace=0.35, 
+                         left=0.06, right=0.96, top=0.88, bottom=0.15)
+    
+    # 1. Enhanced Jaccard Similarity Timeline
+    ax1 = fig.add_subplot(gs[0, 0])
     if temporal_metrics['jaccard_similarity']:
         transitions = list(temporal_metrics['jaccard_similarity'].keys())
         values = list(temporal_metrics['jaccard_similarity'].values())
-        ax1.plot(range(len(transitions)), values, 'o-', color='#3498db', linewidth=2, markersize=8)
+        
+        # Create enhanced line plot with shadow effect
+        ax1.plot(range(len(transitions)), values, 'o-', 
+                color=colors['primary'], linewidth=3.5, markersize=9,
+                markerfacecolor='white', markeredgewidth=2.5, 
+                markeredgecolor=colors['primary'], alpha=0.9,
+                markerfacecoloralt=colors['primary'])
+        
+        # Add subtle shadow line
+        ax1.plot(range(len(transitions)), values, 'o-', 
+                color=colors['primary'], linewidth=1.5, markersize=9,
+                alpha=0.3, zorder=0)
+        
         ax1.set_xticks(range(len(transitions)))
-        ax1.set_xticklabels(transitions, rotation=45)
-        ax1.set_ylabel('Jaccard Similarity')
-        ax1.set_title('Community Similarity Between Consecutive Months')
-        ax1.grid(True, alpha=0.3)
-        ax1.set_ylim([0, 1])
+        ax1.set_xticklabels(transitions, rotation=45, ha='right', fontsize=11, 
+                           color=colors['neutral'], fontweight='medium')
+        ax1.set_ylabel('Jaccard Similarity', fontsize=13, fontweight='bold', 
+                      color=colors['neutral'])
+        ax1.set_title('Community Similarity\nBetween Consecutive Months', 
+                     fontsize=14, fontweight='bold', pad=20, color=colors['neutral'])
+        ax1.set_ylim([0, 1.05])
+        ax1.grid(True, alpha=0.25, linestyle='--', linewidth=1.0)
+        
+        # Enhanced background with subtle gradient effect
+        ax1.set_facecolor('#F8F9FA')
+        
+        # Add subtle border
+        for spine in ax1.spines.values():
+            spine.set_linewidth(1.5)
+            spine.set_color("#FFFFFF")
     
-    # 2. NMI Scores
-    ax2 = axes[0, 1]
+    # 2. Enhanced NMI Scores
+    ax2 = fig.add_subplot(gs[0, 1])
     if temporal_metrics['nmi_scores']:
         transitions = list(temporal_metrics['nmi_scores'].keys())
         values = list(temporal_metrics['nmi_scores'].values())
-        ax2.plot(range(len(transitions)), values, 's-', color='#e74c3c', linewidth=2, markersize=8)
+        
+        # Create enhanced line plot with different marker style
+        ax2.plot(range(len(transitions)), values, 's-', 
+                color=colors['secondary'], linewidth=3.5, markersize=8,
+                markerfacecolor='white', markeredgewidth=2.5, 
+                markeredgecolor=colors['secondary'], alpha=0.9)
+        
+        # Add subtle shadow line
+        ax2.plot(range(len(transitions)), values, 's-', 
+                color=colors['secondary'], linewidth=1.5, markersize=8,
+                alpha=0.3, zorder=0)
+        
         ax2.set_xticks(range(len(transitions)))
-        ax2.set_xticklabels(transitions, rotation=45)
-        ax2.set_ylabel('NMI Score')
-        ax2.set_title('Normalized Mutual Information')
-        ax2.grid(True, alpha=0.3)
-        ax2.set_ylim([0, 1])
+        ax2.set_xticklabels(transitions, rotation=45, ha='right', fontsize=11,
+                           color=colors['neutral'], fontweight='medium')
+        ax2.set_ylabel('NMI Score', fontsize=13, fontweight='bold',
+                      color=colors['neutral'])
+        ax2.set_title('Normalized Mutual\nInformation', 
+                     fontsize=14, fontweight='bold', pad=20, color=colors['neutral'])
+        ax2.set_ylim([0, 1.05])
+        ax2.grid(True, alpha=0.25, linestyle='--', linewidth=1.0)
+        ax2.set_facecolor('#F8F9FA')
+        
+        # Add subtle border
+        for spine in ax2.spines.values():
+            spine.set_linewidth(1.5)
+            spine.set_color('#E0E0E0')
     
-    # 3. Persistence Coefficient
-    ax3 = axes[0, 2]
-    if temporal_metrics['persistence_coefficient']:
-        transitions = list(temporal_metrics['persistence_coefficient'].keys())
-        values = list(temporal_metrics['persistence_coefficient'].values())
-        ax3.plot(range(len(transitions)), values, '^-', color='#2ecc71', linewidth=2, markersize=8)
-        ax3.set_xticks(range(len(transitions)))
-        ax3.set_xticklabels(transitions, rotation=45)
-        ax3.set_ylabel('Persistence Coefficient')
-        ax3.set_title('Community Persistence')
-        ax3.grid(True, alpha=0.3)
-        ax3.set_ylim([0, 1])
-    
-    # 4. Autarky Evolution
-    ax4 = axes[1, 0]
-    if temporal_metrics['autarky_evolution']:
-        months = sorted(temporal_metrics['autarky_evolution'].keys())
-        values = [temporal_metrics['autarky_evolution'][m] for m in months]
-        ax4.bar(months, values, color='#9b59b6', alpha=0.7)
-        ax4.set_xlabel('Month')
-        ax4.set_ylabel('Autarky Coefficient')
-        ax4.set_title('Network Autarky Evolution')
-        ax4.grid(True, alpha=0.3, axis='y')
-    
-    # 5. Modularity Evolution
-    ax5 = axes[1, 1]
-    if temporal_metrics['modularity_evolution']:
-        months = sorted(temporal_metrics['modularity_evolution'].keys())
-        values = [temporal_metrics['modularity_evolution'][m] for m in months]
-        ax5.plot(months, values, 'o-', color='#f39c12', linewidth=2, markersize=8)
-        ax5.fill_between(months, values, alpha=0.3, color='#f39c12')
-        ax5.set_xlabel('Month')
-        ax5.set_ylabel('Modularity Q')
-        ax5.set_title('Network Modularity Evolution')
-        ax5.grid(True, alpha=0.3)
-    
-    # 6. Community Evolution Stacked Bar
-    ax6 = axes[1, 2]
+    # 3. Enhanced Community Evolution Stacked Bar
+    ax3 = fig.add_subplot(gs[0, 2])
     if temporal_metrics['community_evolution']:
         evolution_data = defaultdict(list)
-        transitions = sorted(temporal_metrics['community_evolution'].keys())
+        transitions = list(temporal_metrics['community_evolution'].keys())
         
         for transition in transitions:
             for event_type in ['stable', 'grown', 'shrunk', 'split', 'merged', 'disappeared', 'new']:
@@ -129,24 +173,58 @@ def plot_temporal_metrics(temporal_metrics, monthly_communities, figsize=(16, 10
                 )
         
         bottom = np.zeros(len(transitions))
-        colors = ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#9b59b6', '#95a5a6', '#1abc9c']
         
-        for (event_type, values), color in zip(evolution_data.items(), colors):
-            ax6.bar(range(len(transitions)), values, bottom=bottom, 
-                   label=event_type.capitalize(), color=color, alpha=0.8)
-            bottom += np.array(values)
+        # Enhanced color palette for stacked bars with better contrast
+        stack_colors = {
+            'stable': '#3498DB',      # Bright Blue
+            'grown': '#2ECC71',       # Emerald Green  
+            'shrunk': '#E67E22',      # Vibrant Orange
+            'split': '#E74C3C',       # Bold Red
+            'merged': '#9B59B6',      # Amethyst Purple
+            'disappeared': '#95A5A6', # Light Gray
+            'new': '#F39C12'          # Golden Yellow
+        }
         
-        ax6.set_xticks(range(len(transitions)))
-        ax6.set_xticklabels(transitions, rotation=45)
-        ax6.set_ylabel('Number of Communities')
-        ax6.set_title('Community Evolution Events')
-        ax6.legend(loc='upper right', fontsize=8)
-        ax6.grid(True, alpha=0.3, axis='y')
+        bars = []
+        for event_type in ['stable', 'grown', 'shrunk', 'split', 'merged', 'disappeared', 'new']:
+            if event_type in evolution_data:
+                values = evolution_data[event_type]
+                bar = ax3.bar(range(len(transitions)), values, bottom=bottom, 
+                             label=event_type.capitalize(), color=stack_colors[event_type], 
+                             alpha=0.9, edgecolor='white', linewidth=1.2,
+                             width=0.8)
+                bars.append(bar)
+                bottom += np.array(values)
+        
+        ax3.set_xticks(range(len(transitions)))
+        ax3.set_xticklabels(transitions, rotation=45, ha='right', fontsize=11,
+                           color=colors['neutral'], fontweight='medium')
+        ax3.set_ylabel('Number of Communities', fontsize=13, fontweight='bold',
+                      color=colors['neutral'])
+        ax3.set_title('Community Evolution Events', 
+                     fontsize=14, fontweight='bold', pad=20, color=colors['neutral'])
+        
+        # Enhanced legend with better positioning
+        ax3.legend(loc='center', fontsize=10, ncol=4, 
+                  bbox_to_anchor=(0.5, -.3), framealpha=0.9)
+        
+        ax3.grid(True, alpha=0.25, axis='y', linestyle='--', linewidth=1.0)
+        ax3.set_facecolor('#F8F9FA')
+        
+        # Add subtle border
+        for spine in ax3.spines.values():
+            spine.set_linewidth(1.5)
+            spine.set_color('#E0E0E0')
+
+    # Enhanced figure-wide styling
+    fig.patch.set_facecolor('white')
+    fig.patch.set_alpha(1.0)
     
-    plt.suptitle('Temporal Network Analysis Metrics', fontsize=16, y=1.02)
+    # Add a subtle title for the entire figure
+    # fig.suptitle('Temporal Community Analysis', fontsize=16, fontweight='bold', 
+    #             y=0.95, color=colors['neutral'])
+    
     plt.tight_layout()
-    plt.show()
-    
     return fig
 
 def create_temporal_summary_report(temporal_metrics, monthly_communities):
@@ -228,16 +306,16 @@ def run_complete_temporal_analysis(all_results, settl_name, month_range=range(4,
     plt.show()
     
     # 2. Stable communities
-    print("\n🏛️ Stable communities...")
-    multi, temporal, super_stable = plot_stable_communities(all_results, settl_name, month_range)
-    plt.show()
+    # print("\n🏛️ Stable communities...")
+    # multi, temporal, super_stable = plot_stable_communities(all_results, settl_name, month_range)
+    # plt.show()
     
-    print(f"   Multi-service: {len(multi)} | Temporal: {len(temporal)} | Super: {len(super_stable)}")
+    # print(f"   Multi-service: {len(multi)} | Temporal: {len(temporal)} | Super: {len(super_stable)}")
     
-    if super_stable:
-        top3 = sorted(super_stable.items(), key=lambda x: x[1]['stability_score'], reverse=True)[:3]
-        for i, (p, d) in enumerate(top3, 1):
-            print(f"   #{i} {p}: {len(d['services'])} services, score={d['stability_score']:.2f}")
+    # if super_stable:
+    #     top3 = sorted(super_stable.items(), key=lambda x: x[1]['stability_score'], reverse=True)[:5]
+    #     for i, (p, d) in enumerate(top3, 1):
+    #         print(f"   #{i} {p}: {len(d['services'])} services, score={d['stability_score']:.2f}")
     
     # 3. Metrics
     print("\n📊 Temporal metrics...")
@@ -248,13 +326,13 @@ def run_complete_temporal_analysis(all_results, settl_name, month_range=range(4,
     # 4. Report
     print(create_temporal_summary_report(metrics, communities))
     
-    return {
-        'metrics': metrics,
-        'communities': communities,
-        'multi_service': multi,
-        'temporal_stable': temporal,
-        'super_stable': super_stable
-    }
+    # return {
+    #     'metrics': metrics,
+    #     'communities': communities,
+    #     'multi_service': multi,
+    #     'temporal_stable': temporal,
+    #     'super_stable': super_stable
+    # }
 
 def quick_single_month_analysis(all_results, settl_name, month_idx=5):
     """Quick single month visualization"""
@@ -426,19 +504,20 @@ def plot_enhanced_service_areas(all_results, settl_name, month_idx,
     
     return provider_consumer_map, providers_by_service
 
-def plot_temporal_service_evolution(all_results,  settl_name, 
-                                   month_range, figsize=(20, 12)):
+def plot_temporal_service_evolution(all_results, settl_name, 
+                                   month_range, figsize=(10, 5)):
     """
     Visualize service areas evolution across all months in the range
     """
-    # Use global defaults if not provided
-
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+    from matplotlib.lines import Line2D
     
     months = list(month_range)
     n_months = len(months)
     
-    # Create subplots grid
-    cols = 3
+    # Create subplots grid with extra space for legend
+    cols = 2
     rows = (n_months + cols - 1) // cols
     fig, axes = plt.subplots(rows, cols, figsize=figsize)
     axes = axes.flatten() if n_months > 1 else [axes]
@@ -462,6 +541,9 @@ def plot_temporal_service_evolution(all_results,  settl_name,
         if all_positions:
             break
     
+    # Collect all services that appear across all months for legend
+    all_services_used = set()
+    
     # Plot for each month
     for plot_idx, month_idx in enumerate(months):
         ax = axes[plot_idx]
@@ -470,13 +552,13 @@ def plot_temporal_service_evolution(all_results,  settl_name,
         if all_positions:
             all_x = [all_positions[node][0] for node in all_positions]
             all_y = [all_positions[node][1] for node in all_positions]
-            ax.scatter(all_x, all_y, c='lightgray', s=10, alpha=0.3, zorder=1)
+            ax.scatter(all_x, all_y, c='lightgray', s=100, alpha=0.7, zorder=1, label='Base nodes', edgecolors='white', linewidth=0.5)
         
         provider_count = 0
         service_coverage = set()
         
         # Plot each service
-        for service in service_list:
+        for c, service in enumerate(service_list):
             try:
                 graph = all_results[settl_name][service]["stats"].graphs[month_idx]
                 color = SERVICE_COLORS.get(service, "#34495e")
@@ -491,30 +573,37 @@ def plot_temporal_service_evolution(all_results,  settl_name,
                         service_coverage.add(service)
                 
                 # Draw areas for each provider
+                service_has_areas = False
                 for provider, consumers in providers.items():
                     if len(consumers) >= 1:
                         group_nodes = consumers | {provider}
                         group_pos = [all_positions[node] for node in group_nodes if node in all_positions]
                         
-                        if len(group_pos) >= 3:
+                        if len(group_pos) >= 2:
                             try:
                                 points = np.array(group_pos)
                                 hull = ConvexHull(points)
                                 hull_points = points[hull.vertices]
                                 
-                                polygon = Polygon(hull_points, alpha=0.1, 
+                                polygon = Polygon(hull_points, alpha=0.4, 
                                                 facecolor=color, edgecolor=color,
                                                 linewidth=1, zorder=2)
                                 ax.add_patch(polygon)
+                                service_has_areas = True
                             except:
                                 pass
                         
                         # Mark provider
                         if provider in all_positions:
                             ax.scatter(all_positions[provider][0], all_positions[provider][1], 
-                                     c=color, s=50, marker='*', 
-                                     edgecolors='white', linewidth=0.5, zorder=10)
+                                     c=color, s=300/c, marker='o', 
+                                     edgecolors='white', linewidth=1,)
                             provider_count += 1
+                
+                # Track services that actually have coverage areas
+                if service_has_areas:
+                    all_services_used.add(service)
+                    
             except:
                 continue
         
@@ -528,8 +617,60 @@ def plot_temporal_service_evolution(all_results,  settl_name,
     for idx in range(n_months, len(axes)):
         axes[idx].axis('off')
     
-    plt.suptitle(f'Temporal Evolution of Service Areas - {settl_name}', fontsize=16)
+    # Create publication-quality legend at bottom
+    legend_elements = []
+    
+    # Node legend elements
+    legend_elements.append(Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgray', 
+                                 markeredgecolor='gray', markeredgewidth=0.3,
+                                 markersize=8, alpha=0.8, label='Network nodes'))
+    
+    # Service provider and area legend elements (grouped by service)
+    for service in sorted(all_services_used):
+        color = SERVICE_COLORS.get(service, "#34495e")
+        
+        # Provider (star)
+        legend_elements.append(Line2D([0], [0], marker='*', color='w', 
+                                     markerfacecolor=color, markeredgecolor='white', 
+                                     markeredgewidth=0.8, markersize=12, 
+                                     label=f'{service.title()} provider'))
+        
+        # Coverage area (polygon)
+        legend_elements.append(mpatches.Patch(facecolor=color, alpha=0.15, 
+                                            edgecolor=color, linewidth=1.2,
+                                            label=f'{service.title()} service area'))
+    
+    # plt.suptitle(f'Temporal Evolution of Service Areas: {settl_name}', 
+    #             fontsize=18, fontweight='bold', y=0.98)
+    
+    # Calculate optimal number of columns for legend
+    n_legend_items = len(legend_elements)
+    ncols = min(4, max(2, n_legend_items // 2))  # 2-4 columns depending on items
+    
+    # Add publication-quality legend at bottom
+    legend = fig.legend(handles=legend_elements, 
+                       loc='lower center', 
+                       bbox_to_anchor=(0.5, -0.02),
+                       fontsize=11,
+                       frameon=True,
+                       fancybox=False,
+                       shadow=False,
+                       framealpha=0.9,
+                       edgecolor='black',
+                       facecolor='white',
+                       ncol=ncols,
+                       columnspacing=1.5,
+                       handletextpad=0.6,
+                       handlelength=1.8,
+                       borderpad=0.8)
+    
+    # Style the legend frame for publication quality
+    legend.get_frame().set_linewidth(0.8)
+    
+    # Adjust layout to accommodate bottom legend
     plt.tight_layout()
+    plt.subplots_adjust(bottom=0.15, top=0.93)  # Make room for bottom legend and title
+    
     return fig
 
 def identify_stable_communities(all_results, settl_name, 
@@ -798,7 +939,7 @@ def plot_stable_communities(all_results,  settl_name,
                           c='black', s=120, marker='*',
                           edgecolors='gold', linewidth=2, zorder=10)
     
-    ax3.set_title(f'Super-Stable Communities\n(Top 5 by combined stability)', fontsize=12)
+    ax3.set_title(f'GenrallyStable Communities\n(Top 5 by combined stability)', fontsize=12)
     ax3.set_aspect('equal')
     ax3.axis('off')
     
@@ -1043,497 +1184,3 @@ def calculate_modularity(G, partition):
                 Q += A_ij - (k_i * k_j) / (2 * m)
     
     return Q / (2 * m)
-
-def plot_publication_service_areas(all_results,  settl_name, 
-                                  month_idx=5, figsize=(10, 8), dpi=300):
-    """
-    Publication-ready visualization with consistent color scheme
-    """
-    
-    # Get positions and relationships
-    pos = {}
-    provider_consumer_map = defaultdict(lambda: defaultdict(set))
-    
-    for service in service_list:
-        try:
-            graph = all_results[settl_name][service]["stats"].graphs[month_idx]
-            if not pos:
-                for node, data in graph.nodes(data=True):
-                    if "x" in data and "y" in data:
-                        pos[node] = (data["x"], data["y"])
-                    elif "longitude" in data and "latitude" in data:
-                        pos[node] = (data["longitude"], data["latitude"])
-            
-            for source, target, data in graph.edges(data=True):
-                if (data.get("is_service_flow", False) and 
-                    data.get("assignment", 0) > 0 and source != target):
-                    provider_consumer_map[service][target].add(source)
-        except:
-            continue
-    
-    if not pos:
-        return None
-    
-    # Create figure
-    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
-    
-    # Background nodes
-    all_x = [pos[node][0] for node in pos]
-    all_y = [pos[node][1] for node in pos]
-    ax.scatter(all_x, all_y, c='#e0e0e0', s=8, alpha=0.5, zorder=1, rasterized=True)
-    
-    # Plot service areas with publication colors
-    legend_handles = []
-    
-    for service_idx, service in enumerate(service_list):
-        if service not in provider_consumer_map:
-            continue
-            
-        color = SERVICE_COLORS.get(service, "#888888")
-        service_plotted = False
-        
-        for provider, consumers in provider_consumer_map[service].items():
-            if len(consumers) >= 1:
-                group_nodes = consumers | {provider}
-                group_pos = [pos[node] for node in group_nodes if node in pos]
-                
-                # Draw convex hull
-                if len(group_pos) >= 3:
-                    try:
-                        from scipy.spatial import ConvexHull
-                        points = np.array(group_pos)
-                        hull = ConvexHull(points)
-                        hull_points = points[hull.vertices]
-                        
-                        polygon = Polygon(hull_points, alpha=0.2, 
-                                        facecolor=color, edgecolor=color,
-                                        linewidth=1.0, zorder=2 + service_idx * 0.1)
-                        ax.add_patch(polygon)
-                    except:
-                        pass
-                
-                # Plot nodes
-                consumer_x = [pos[node][0] for node in consumers if node in pos]
-                consumer_y = [pos[node][1] for node in consumers if node in pos]
-                
-                ax.scatter(consumer_x, consumer_y, c=color, s=20, alpha=0.7,
-                          edgecolors='white', linewidth=0.3, zorder=10, rasterized=True)
-                
-                # Provider marker
-                if provider in pos:
-                    ax.scatter(pos[provider][0], pos[provider][1], 
-                              c=color, s=80, marker='*',
-                              edgecolors='black', linewidth=0.8, zorder=12)
-                    service_plotted = True
-        
-        # Add to legend
-        if service_plotted:
-            legend_handles.append(mpatches.Patch(color=color, label=service.capitalize(), alpha=0.7))
-    
-    # Title and formatting
-    month_name = month_order[month_idx] if month_idx < len(month_order) else f"Month {month_idx}"
-    ax.set_title(f'Service Provision Areas - {settl_name.replace("_", " ").title()} ({month_name})', 
-                fontweight='bold', pad=15)
-    
-    # Legend
-    ax.legend(handles=legend_handles, loc='upper left', frameon=True, 
-             fancybox=False, shadow=False, framealpha=0.9, ncol=2)
-    
-    # Clean axes
-    ax.set_xlabel('Longitude', fontweight='bold')
-    ax.set_ylabel('Latitude', fontweight='bold')
-    ax.tick_params(axis='both', which='major', labelsize=9)
-    ax.grid(True, alpha=0.15, linestyle='-', linewidth=0.5)
-    ax.set_aspect('equal')
-    
-    # Tighten layout
-    plt.tight_layout()
-    
-    return fig, ax
-
-def plot_publication_temporal_metrics(temporal_metrics, figsize=(12, 8), dpi=300):
-    """
-    Publication-ready temporal metrics visualization
-    """
-    fig, axes = plt.subplots(2, 3, figsize=figsize, dpi=dpi)
-    
-    # Define consistent colors for metrics
-    metric_colors = {
-        'jaccard': '#2E86AB',      # Deep blue
-        'nmi': '#A23B72',           # Purple-red
-        'persistence': '#2A9D8F',   # Teal
-        'autarky': '#6A4C93',       # Purple
-        'modularity': '#F77F00',    # Orange
-        'evolution': SERVICE_COLORS  # Use service colors
-    }
-    
-    # 1. Jaccard Similarity
-    ax1 = axes[0, 0]
-    if temporal_metrics['jaccard_similarity']:
-        transitions = list(temporal_metrics['jaccard_similarity'].keys())
-        values = list(temporal_metrics['jaccard_similarity'].values())
-        ax1.plot(range(len(transitions)), values, 'o-', color=metric_colors['jaccard'], 
-                linewidth=2.5, markersize=7, markeredgecolor='white', markeredgewidth=1)
-        ax1.set_xticks(range(len(transitions)))
-        ax1.set_xticklabels(transitions, rotation=45, ha='right')
-        ax1.set_ylabel('Jaccard Index', fontweight='bold')
-        ax1.set_title('(a) Community Similarity', fontweight='bold')
-        ax1.set_ylim([0, 1.05])
-        ax1.axhline(y=0.5, color='gray', linestyle='--', alpha=0.5, linewidth=0.8)
-    
-    # 2. NMI
-    ax2 = axes[0, 1]
-    if temporal_metrics['nmi_scores']:
-        transitions = list(temporal_metrics['nmi_scores'].keys())
-        values = list(temporal_metrics['nmi_scores'].values())
-        ax2.plot(range(len(transitions)), values, 's-', color=metric_colors['nmi'], 
-                linewidth=2.5, markersize=7, markeredgecolor='white', markeredgewidth=1)
-        ax2.set_xticks(range(len(transitions)))
-        ax2.set_xticklabels(transitions, rotation=45, ha='right')
-        ax2.set_ylabel('NMI Score', fontweight='bold')
-        ax2.set_title('(b) Mutual Information', fontweight='bold')
-        ax2.set_ylim([0, 1.05])
-        ax2.axhline(y=0.5, color='gray', linestyle='--', alpha=0.5, linewidth=0.8)
-    
-    # 3. Persistence
-    ax3 = axes[0, 2]
-    if temporal_metrics['persistence_coefficient']:
-        transitions = list(temporal_metrics['persistence_coefficient'].keys())
-        values = list(temporal_metrics['persistence_coefficient'].values())
-        ax3.plot(range(len(transitions)), values, '^-', color=metric_colors['persistence'], 
-                linewidth=2.5, markersize=7, markeredgecolor='white', markeredgewidth=1)
-        ax3.set_xticks(range(len(transitions)))
-        ax3.set_xticklabels(transitions, rotation=45, ha='right')
-        ax3.set_ylabel('Persistence', fontweight='bold')
-        ax3.set_title('(c) Community Persistence', fontweight='bold')
-        ax3.set_ylim([0, 1.05])
-        ax3.axhline(y=0.5, color='gray', linestyle='--', alpha=0.5, linewidth=0.8)
-    
-    # 4. Autarky
-    ax4 = axes[1, 0]
-    if temporal_metrics['autarky_evolution']:
-        months = list(temporal_metrics['autarky_evolution'].keys())
-        values = list(temporal_metrics['autarky_evolution'].values())
-        bars = ax4.bar(range(len(months)), values, color=metric_colors['autarky'], 
-                      alpha=0.8, edgecolor='black', linewidth=1)
-        ax4.set_xticks(range(len(months)))
-        ax4.set_xticklabels(months, rotation=45, ha='right')
-        ax4.set_ylabel('Autarky Coefficient', fontweight='bold')
-        ax4.set_title('(d) Self-Sufficiency Evolution', fontweight='bold')
-        ax4.set_ylim([0, max(values) * 1.1 if values else 0.5])
-    
-    # 5. Modularity
-    ax5 = axes[1, 1]
-    if temporal_metrics['modularity_evolution']:
-        months = list(temporal_metrics['modularity_evolution'].keys())
-        values = list(temporal_metrics['modularity_evolution'].values())
-        ax5.plot(range(len(months)), values, 'o-', color=metric_colors['modularity'], 
-                linewidth=2.5, markersize=7, markeredgecolor='white', markeredgewidth=1)
-        ax5.fill_between(range(len(months)), values, alpha=0.3, color=metric_colors['modularity'])
-        ax5.set_xticks(range(len(months)))
-        ax5.set_xticklabels(months, rotation=45, ha='right')
-        ax5.set_ylabel('Modularity Q', fontweight='bold')
-        ax5.set_title('(e) Network Modularity', fontweight='bold')
-        ax5.set_ylim([0, max(values) * 1.1 if values else 0.5])
-    
-    # 6. Evolution Events
-    ax6 = axes[1, 2]
-    if temporal_metrics['community_evolution']:
-        from collections import defaultdict
-        evolution_data = defaultdict(list)
-        transitions = list(temporal_metrics['community_evolution'].keys())
-        
-        event_types = ['stable', 'grown', 'shrunk', 'split', 'merged', 'disappeared', 'new']
-        event_colors = ['#2A9D8F', '#52B788', '#95D5B2', '#F77F00', '#FCBF49', '#D62828', '#003049']
-        
-        for transition in transitions:
-            for event_type in event_types:
-                evolution_data[event_type].append(
-                    temporal_metrics['community_evolution'][transition].get(event_type, 0)
-                )
-        
-        bottom = np.zeros(len(transitions))
-        for (event_type, values), color in zip(evolution_data.items(), event_colors):
-            ax6.bar(range(len(transitions)), values, bottom=bottom, 
-                   label=event_type.capitalize(), color=color, alpha=0.85,
-                   edgecolor='black', linewidth=0.5)
-            bottom += np.array(values)
-        
-        ax6.set_xticks(range(len(transitions)))
-        ax6.set_xticklabels(transitions, rotation=45, ha='right')
-        ax6.set_ylabel('Number of Events', fontweight='bold')
-        ax6.set_title('(f) Community Dynamics', fontweight='bold')
-        ax6.legend(loc='upper right', fontsize=8, ncol=2, frameon=True, framealpha=0.9)
-    
-    # Overall title
-    fig.suptitle('Temporal Network Analysis', fontsize=14, fontweight='bold', y=1.02)
-    
-    # Adjust layout
-    plt.tight_layout()
-    
-    return fig
-
-def save_publication_figures(all_results, output_dir='./figures/', format='pdf'):
-    """
-    Generate and save all publication-ready figures
-    """
-    import os
-    os.makedirs(output_dir, exist_ok=True)
-    
-    # 1. Service areas for key month
-    fig1, _ = plot_publication_service_areas(all_results, month_idx=5, dpi=300)
-    if fig1:
-        fig1.savefig(f'{output_dir}service_areas.{format}', dpi=300, bbox_inches='tight')
-        print(f"✓ Saved: service_areas.{format}")
-    
-    # 2. Temporal metrics
-    metrics, _ = calculate_temporal_metrics(all_results)
-    fig2 = plot_publication_temporal_metrics(metrics, dpi=300)
-    if fig2:
-        fig2.savefig(f'{output_dir}temporal_metrics.{format}', dpi=300, bbox_inches='tight')
-        print(f"✓ Saved: temporal_metrics.{format}")
-    
-    plt.show()
-    print(f"\n📊 All figures saved to {output_dir}")
-
-# Quick usage for publication
-def quick_publication_plots(all_results):
-    """Generate publication-ready plots with one command"""
-    print("🎨 Generating publication-ready visualizations...")
-    
-    # Single month view
-    fig1, ax1 = plot_publication_service_areas(all_results, month_idx=5)
-    plt.show()
-    
-    # Temporal metrics
-    metrics, _ = calculate_temporal_metrics(all_results)
-    fig2 = plot_publication_temporal_metrics(metrics)
-    plt.show()
-    
-    return fig1, fig2
-
-# Example usage:
-
-
-
-
-
-def plot_temporal_service_evolution(all_results, settl_name, 
-                                   month_range, figsize=(20, 12)):
-    """
-    Visualize service areas evolution across all months in the range
-    """
-
-    
-    months = list(month_range)
-    n_months = len(months)
-    
-    # Create subplots grid
-    cols = 3
-    rows = (n_months + cols - 1) // cols
-    fig, axes = plt.subplots(rows, cols, figsize=figsize)
-    axes = axes.flatten() if n_months > 1 else [axes]
-    
-    # Get consistent positions from first available month
-    all_positions = {}
-    for month_idx in months:
-        for service in service_list:
-            try:
-                graph = all_results[settl_name][service]["stats"].graphs[month_idx]
-                for node, data in graph.nodes(data=True):
-                    if node not in all_positions:
-                        if "x" in data and "y" in data:
-                            all_positions[node] = (data["x"], data["y"])
-                        elif "longitude" in data and "latitude" in data:
-                            all_positions[node] = (data["longitude"], data["latitude"])
-                if all_positions:
-                    break
-            except:
-                continue
-        if all_positions:
-            break
-    
-    # Plot for each month
-    for plot_idx, month_idx in enumerate(months):
-        ax = axes[plot_idx]
-        
-        # Base nodes
-        if all_positions:
-            all_x = [all_positions[node][0] for node in all_positions]
-            all_y = [all_positions[node][1] for node in all_positions]
-            ax.scatter(all_x, all_y, c='lightgray', s=10, alpha=0.3, zorder=1)
-        
-        provider_count = 0
-        service_coverage = set()
-        
-        # Plot each service
-        for service in service_list:
-            try:
-                graph = all_results[settl_name][service]["stats"].graphs[month_idx]
-                color = SERVICE_COLORS.get(service, "#34495e")
-                
-                # Extract provider-consumer relationships
-                providers = defaultdict(set)
-                for source, target, data in graph.edges(data=True):
-                    if (data.get("is_service_flow", False) and 
-                        data.get("assignment", 0) > 0 and 
-                        source != target):
-                        providers[target].add(source)
-                        service_coverage.add(service)
-                
-                # Draw areas for each provider
-                for provider, consumers in providers.items():
-                    if len(consumers) >= 1:
-                        group_nodes = consumers | {provider}
-                        group_pos = [all_positions[node] for node in group_nodes if node in all_positions]
-                        
-                        if len(group_pos) >= 3:
-                            try:
-                                points = np.array(group_pos)
-                                hull = ConvexHull(points)
-                                hull_points = points[hull.vertices]
-                                
-                                polygon = Polygon(hull_points, alpha=0.1, 
-                                                facecolor=color, edgecolor=color,
-                                                linewidth=1, zorder=2)
-                                ax.add_patch(polygon)
-                            except:
-                                pass
-                        
-                        # Mark provider
-                        if provider in all_positions:
-                            ax.scatter(all_positions[provider][0], all_positions[provider][1], 
-                                     c=color, s=50, marker='*', 
-                                     edgecolors='white', linewidth=0.5, zorder=10)
-                            provider_count += 1
-            except:
-                continue
-        
-        month_name = month_order[month_idx] if month_idx < len(month_order) else f"Month {month_idx}"
-        ax.set_title(f'{month_name}\nProviders: {provider_count}, Services: {len(service_coverage)}', 
-                    fontsize=10)
-        ax.set_aspect('equal')
-        ax.axis('off')
-    
-    # Hide unused subplots
-    for idx in range(n_months, len(axes)):
-        axes[idx].axis('off')
-    
-    plt.suptitle(f'Temporal Evolution of Service Areas - {settl_name}', fontsize=16)
-    plt.tight_layout()
-    return fig
-
-
-
-def calculate_temporal_metrics(all_results, settl_name, month_range):
-    """
-    Calculate comprehensive temporal metrics based on literature review
-    """
-    # Use global defaults if not provide
-    
-    temporal_metrics = {
-        'jaccard_similarity': {},
-        'nmi_scores': {},
-        'persistence_coefficient': {},
-        'autarky_evolution': {},
-        'modularity_evolution': {},
-        'community_evolution': {}
-    }
-    
-    # Store communities for each month
-    monthly_communities = {}
-    monthly_graphs = {}
-    
-    for month_idx in month_range:
-        # Extract provider-consumer communities
-        communities = defaultdict(set)
-        combined_graph = nx.Graph()
-        
-        for service in service_list:
-            try:
-                graph = all_results[settl_name][service]["stats"].graphs[month_idx]
-                
-                # Add to combined graph for modularity calculation
-                for u, v, data in graph.edges(data=True):
-                    if data.get("is_service_flow", False) and data.get("assignment", 0) > 0:
-                        combined_graph.add_edge(u, v, weight=data.get("assignment", 1),
-                                              service=service)
-                
-                # Extract communities
-                for source, target, data in graph.edges(data=True):
-                    if (data.get("is_service_flow", False) and 
-                        data.get("assignment", 0) > 0 and 
-                        source != target):
-                        communities[target].add(source)
-                        communities[target].add(target)
-                        
-            except:
-                continue
-        
-        monthly_communities[month_idx] = communities
-        monthly_graphs[month_idx] = combined_graph
-    
-    # Calculate metrics between consecutive months
-    months = sorted(monthly_communities.keys())
-    
-    for i in range(len(months) - 1):
-        month1, month2 = months[i], months[i + 1]
-        
-        # 1. Jaccard Similarity
-        comm1 = set().union(*monthly_communities[month1].values()) if monthly_communities[month1] else set()
-        comm2 = set().union(*monthly_communities[month2].values()) if monthly_communities[month2] else set()
-        
-        if comm1 and comm2:
-            jaccard = len(comm1 & comm2) / len(comm1 | comm2)
-            temporal_metrics['jaccard_similarity'][f'{month_order[month1]}->{month_order[month2]}'] = jaccard
-        
-        # 2. Persistence Coefficient
-        persistence_scores = []
-        for provider, community in monthly_communities[month1].items():
-            if provider in monthly_communities[month2]:
-                next_community = monthly_communities[month2][provider]
-                if community and next_community:
-                    persistence = len(community & next_community) / len(community)
-                    persistence_scores.append(persistence)
-        
-        if persistence_scores:
-            key = f'{month_order[month1]}->{month_order[month2]}'
-            temporal_metrics['persistence_coefficient'][key] = np.mean(persistence_scores)
-        
-        # 3. NMI Score
-        nmi = calculate_nmi(monthly_communities[month1], monthly_communities[month2])
-        temporal_metrics['nmi_scores'][f'{month_order[month1]}->{month_order[month2]}'] = nmi
-        
-        # 4. Community Evolution
-        evolution = analyze_community_evolution(monthly_communities[month1], monthly_communities[month2])
-        temporal_metrics['community_evolution'][f'{month_order[month1]}->{month_order[month2]}'] = evolution
-    
-    # Calculate per-month metrics
-    for month_idx in months:
-        # Autarky coefficient
-        if monthly_graphs[month_idx].number_of_edges() > 0:
-            internal_flows = 0
-            total_flows = 0
-            
-            for provider, community in monthly_communities[month_idx].items():
-                for node in community:
-                    for neighbor in monthly_graphs[month_idx].neighbors(node):
-                        total_flows += 1
-                        if neighbor in community:
-                            internal_flows += 1
-            
-            autarky = internal_flows / (2 * total_flows) if total_flows > 0 else 0
-            temporal_metrics['autarky_evolution'][month_order[month_idx]] = autarky
-        
-        # Modularity
-        if monthly_graphs[month_idx].number_of_nodes() > 0:
-            partition = {}
-            for comm_id, (provider, nodes) in enumerate(monthly_communities[month_idx].items()):
-                for node in nodes:
-                    partition[node] = comm_id
-            
-            if partition:
-                Q = calculate_modularity(monthly_graphs[month_idx], partition)
-                temporal_metrics['modularity_evolution'][month_order[month_idx]] = Q
-    
-    return temporal_metrics, monthly_communities

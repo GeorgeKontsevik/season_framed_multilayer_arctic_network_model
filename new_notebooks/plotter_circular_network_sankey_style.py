@@ -467,7 +467,7 @@ def plot_circular_network_sankey_style(g, service_name, month_name, min_flow=1):
         yaxis=dict(
             showgrid=False, zeroline=False, showticklabels=False, range=[-1.4, 1.4]
         ),
-        plot_bgcolor="#f8f9fa",
+        plot_bgcolor="#ffffff",
         paper_bgcolor="white",
         font=dict(family="Arial", size=12, color="#2c3e50"),
         width=1000,

@@ -290,6 +290,10 @@ def process_settlement_data(
     
     # Load and process settlement data
     df_all_data = load_settlement_data(main_data_path, settl_name, service_amenities_count_column)
+    if 'pristan' in df_all_data.columns:
+        df_all_data.rename(columns={'pristan': 'marina'}, inplace=True)
+        service_name = 'marina'
+        # print(df_all_data.head())
     update_population_data(df_all_data, settl_name)
     update_service_data(df_all_data, service_name, settl_name)
     update_capacity_data(df_all_data)

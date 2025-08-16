@@ -87,7 +87,7 @@ service_list = [
         "port",
         "airport",
         # "shop",
-        "pristan",]
+        "marina",]
 
 settl_list = ["yanao_kras","mezen","yakut_chuk", "nao"]
 
@@ -105,5 +105,5 @@ SERVICE_COLORS = {
     "atm": "#708090",
     "airport": "#00bcd4",
     "port": "#ffd700",
-    "pristan": "#ff69b4",
+    "marina": "#ff69b4",
 }
