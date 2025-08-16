@@ -4,7 +4,7 @@
 # SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL
 
 
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+<!-- [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
@@ -13,35 +13,7 @@ This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC 
 **Preprint**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)  
 **Data repository**: [zenodo.XXXXXXX](https://zenodo.org/record/XXXXXXX)  
 
-[![SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL](SPLASHIMAGE.JPG/PNG/GIF)](PROJECTURL)
-
-## Installation
-First clone the repository:
-
-```
-git clone https://github.com/USER/REPO.git
-```
-
-Go to the cloned folder and create a new virtual environment. You can either create a new virtual environment then install the necessary dependencies with `pip` using the `requirements.txt` file:
-
-```
-pip install -r requirements.txt
-```
-
-Or create a new environment with the dependencies with `conda` or `mamba` using the `environment.yml` file:
-
-```
-mamba env create -f environment.yml
-```
-Then, install the virtual environment's kernel in Jupyter:
-
-```
-mamba activate ENVNAME
-ipython kernel install --user --name=ENVNAME
-mamba deactivate
-```
-
-You can now run `jupyter lab` with kernel `ENVNAME` (Kernel > Change Kernel > ENVNAME).
+[![SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL](SPLASHIMAGE.JPG/PNG/GIF)](PROJECTURL) -->
 
 ## Repository structure
 
@@ -61,10 +33,11 @@ You can now run `jupyter lab` with kernel `ENVNAME` (Kernel > Change Kernel > EN
 └── requirements.txt        <- Requirements file to set up the environment using pip
 ```
 
-## Credits
+<!-- ## Credits -->
 
-Please cite as: AUTHOR1, AUTHOR2, and AUTHOR3, PROJECTNAME, JOURNAL (YYYY), DOIURL  
 
-Development of SEASON-FRAMED ARCTIC NETWOKR MODEL was supported by FUNDER.
+<!-- Please cite as: AUTHOR1, AUTHOR2, and AUTHOR3, PROJECTNAME, JOURNAL (YYYY), DOIURL  
+
+Development of SEASON-FRAMED ARCTIC NETWOKR MODEL was supported by FUNDER. -->
 
 
