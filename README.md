@@ -29,10 +29,7 @@ This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC 
 ├── scripts                 <- Scripts to execute
 ├── .gitignore              <- Files and folders ignored by git
 ├── .pre-commit-config.yaml <- Pre-commit hooks used
-├── CITATION.cff            <- Citation file (template)
 ├── README.md
-├── TEMPLATE.md             <- Explanation for the template, delete it after use
-├── environment.yml         <- Environment file to set up the environment using conda/mamba
 └── requirements.txt        <- Requirements file to set up the environment using pip
 ```
 
