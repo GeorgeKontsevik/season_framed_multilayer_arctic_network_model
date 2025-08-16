@@ -40,4 +40,6 @@ This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC 
 
 Development of SEASON-FRAMED ARCTIC NETWOKR MODEL was supported by FUNDER. -->
 
-
+***
+![schema](/plots/schemas/arctic_paper_scheme_2.png)
+![sankey_yakut](/plots/sankey/yakut_flow_marina.png)
