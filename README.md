@@ -4,19 +4,55 @@
 # ❄️ SEASONAL MULTILAYER ARCTIC NETWOKR ❄️
 
 
-<!-- [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+<table>
+  <tr>
+    <td>Multilayer network</td>
+     <td>Scheme 1: Network overview</td>
 
-This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL*](PAPERURL) by [AUTHOR1](AUTHOR1URL), [AUTHOR2](AUTHOR2URL), and [AUTHOR3](AUTHOR3URL). The code SHORTEXPLANATION.
+  </tr>
+  <tr>
+    <td><img src="./plots/multilayer/multilayer_network_yanao_kras_Aug.png" width=200 height=200></td>
+    <td><img src="./plots/schemas/arctic_paper_scheme_2.png" width=800 height=200></td>
 
-**Preprint**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)  
-**Data repository**: [zenodo.XXXXXXX](https://zenodo.org/record/XXXXXXX)  
+  </tr>
+ </table>
 
-[![SEASON-FRAMED ARCTIC MULTILAYER NETWOKR MODEL](SPLASHIMAGE.JPG/PNG/GIF)](PROJECTURL) -->
+ <table>
+  <tr>
+    <td>Flows by transport type</td>
+     <td>Scheme 2: Seasonal network evolution</td>
+  </tr>
+  <tr>
+    <td><img src="./plots/circled/round_aug_yanao_kras_marina.png" width=200 height=200></td>
+    <td><img src="./plots/schemas/arctic_paper_scheme_1.png" width=800 height=200></td>
+
+  </tr>
+ </table>
+
+  <table>
+  <tr>
+    <td>Sankey-like demand flow distribution</td>
+  </tr>
+  <tr>
+    <td><img src="./plots/sankey/yanao_flow_marina.png" width=1000 height=500></td>
+
+  </tr>
+ </table>
+
+  <table>
+  <tr>
+    <td>Temporal service areas evolution</td>
+     <td>Temporal network service community evolutions</td>
+  </tr>
+  <tr>
+    <td><img src="./plots/temporal_evolution/temporal_evo_may_aug_yanao_kras.png" width=400 height=200></td>
+    <td><img src="./plots/metrics/metrics_nao.png" width=600 height=200></td>
+
+  </tr>
+ </table>
 
 
-![schema](/plots/schemas/arctic_paper_scheme_2.png)
+
 
 ## Repository structure
 
@@ -32,11 +68,3 @@ This is the source code for the scientific paper/project [*SEASON-FRAMED ARCTIC 
 ├── README.md
 └── requirements.txt        <- Requirements file to set up the environment using pip
 ```
-
-<!-- ## Credits -->
-
-
-<!-- Please cite as: AUTHOR1, AUTHOR2, and AUTHOR3, PROJECTNAME, JOURNAL (YYYY), DOIURL  
-
-Development of SEASON-FRAMED ARCTIC NETWOKR MODEL was supported by FUNDER. -->
-
