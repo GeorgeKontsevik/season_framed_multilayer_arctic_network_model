@@ -1,7 +1,7 @@
 ![lab logo](/docs/github_img_lab.jpeg)
 ***
 
-# SEASONAL MULTILAYER SERVICE NETWOKR: ❄️ ARCTIC
+# SEASONAL MULTILAYER SERVICE NETWOKR: ❄️ARCTIC
 
 
 <table>
