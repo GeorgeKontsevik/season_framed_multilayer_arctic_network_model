@@ -155,50 +155,50 @@ def create_monthly_transport_analysis(
     return pd.DataFrame(records)
 
 
-def create_transport_analysis_with_probability_function(
-    G: nx.Graph,
-    transport_modes: List[str],
-    transport_modes_color: Dict[str, str],
-    probability_function: callable,
-    threshold: float,
-    start_year: int,
-    months_in_year: int = 12,
-    temperature_field: str = "temperature",
-    temp_range: Tuple[float, float] = (-70, 60),
-    num_temp_points: int = 2000
-) -> Tuple[pd.DataFrame, Dict[str, List[Tuple[float, float]]]]:
-    """
-    Complete transport analysis workflow
+# def create_transport_analysis_with_probability_function(
+#     G: nx.Graph,
+#     transport_modes: List[str],
+#     transport_modes_color: Dict[str, str],
+#     probability_function: callable,
+#     threshold: float,
+#     start_year: int,
+#     months_in_year: int = 12,
+#     temperature_field: str = "temperature",
+#     temp_range: Tuple[float, float] = (-70, 60),
+#     num_temp_points: int = 2000
+# ) -> Tuple[pd.DataFrame, Dict[str, List[Tuple[float, float]]]]:
+#     """
+#     Complete transport analysis workflow
     
-    Args:
-        G: NetworkX graph with temperature data
-        transport_modes: List of transport mode names
-        transport_modes_color: Dictionary mapping modes to colors
-        probability_function: Function to calculate transport probabilities
-        threshold: Probability threshold
-        start_year: Starting year of analysis
-        months_in_year: Number of months per year
-        temperature_field: Name of temperature field in node data
-        temp_range: Temperature range for probability analysis
-        num_temp_points: Number of temperature points for analysis
+#     Args:
+#         G: NetworkX graph with temperature data
+#         transport_modes: List of transport mode names
+#         transport_modes_color: Dictionary mapping modes to colors
+#         probability_function: Function to calculate transport probabilities
+#         threshold: Probability threshold
+#         start_year: Starting year of analysis
+#         months_in_year: Number of months per year
+#         temperature_field: Name of temperature field in node data
+#         temp_range: Temperature range for probability analysis
+#         num_temp_points: Number of temperature points for analysis
         
-    Returns:
-        Tuple of (monthly_dataframe, operational_ranges_dict)
-    """
-    from .transport_probability_visualization import plot_transport_probability_legacy
+#     Returns:
+#         Tuple of (monthly_dataframe, operational_ranges_dict)
+#     """
+#     from .transport_probability_visualization import plot_transport_probability_legacy
     
-    # Get operational ranges from probability analysis
-    operational_ranges = plot_transport_probability_legacy(
-        transport_modes, transport_modes_color, 
-        probability_function, threshold
-    )
+#     # Get operational ranges from probability analysis
+#     operational_ranges = plot_transport_probability_legacy(
+#         transport_modes, transport_modes_color, 
+#         probability_function, threshold
+#     )
     
-    # Create monthly analysis
-    df_modes_monthly = create_monthly_transport_analysis(
-        G, operational_ranges, start_year, months_in_year, temperature_field
-    )
+#     # Create monthly analysis
+#     df_modes_monthly = create_monthly_transport_analysis(
+#         G, operational_ranges, start_year, months_in_year, temperature_field
+#     )
     
-    return df_modes_monthly, operational_ranges
+#     return df_modes_monthly, operational_ranges
 
 
 # Fixed version of your original code

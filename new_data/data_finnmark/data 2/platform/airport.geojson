@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:20:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559401050",
+        "aerodrome:type": "seaplane",
+        "aeroway": "aerodrome",
+        "name:en": "Ivalo Seaplane Quay"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4403106,
+          68.5975283
+        ]
+      },
+      "id": "node/559401050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/813893775",
+        "aeroway": "helipad",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4404392,
+          68.5971936
+        ]
+      },
+      "id": "way/813893775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1042032504",
+        "aeroway": "aerodrome",
+        "disused": "yes",
+        "icao": "EFMP",
+        "name": "Martiniiskonpalon lentokenttä",
+        "name:en": "Martiniiskonpalo Airfield",
+        "name:fi": "Martiniiskonpalon lentokenttä",
+        "wikidata": "Q12693855"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7028999,
+          68.6603012
+        ]
+      },
+      "id": "node/1042032504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1101438009",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "290",
+        "addr:postcode": "99800",
+        "addr:street": "Lentokentäntie",
+        "aerodrome:type": "regional",
+        "aeroway": "aerodrome",
+        "ele": "147",
+        "iata": "IVL",
+        "icao": "EFIV",
+        "name": "Ivalon lentoasema",
+        "name:en": "Ivalo Airport",
+        "name:fi": "Ivalon lentoasema",
+        "name:se": "Avvil Girdingieddi",
+        "name:sv": "Ivalo flygplats",
+        "operator": "Finavia",
+        "website": "https://www.finavia.fi/lentoasemat/lentoasema_ivalo",
+        "wikidata": "Q850269",
+        "wikipedia": "en:Ivalo Airport",
+        "wikipedia:fi": "Ivalon lentoasema",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4091906,
+          68.606352
+        ]
+      },
+      "id": "way/1101438009"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1226499321",
+        "aeroway": "helipad",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5253709,
+          68.6568907
+        ]
+      },
+      "id": "way/1226499321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3757699617",
+        "aeroway": "helipad",
+        "name": "Pelastushelikopterin laskeutumispaikka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5664629,
+          68.4274509
+        ]
+      },
+      "id": "node/3757699617"
+    }
+  ]
+}

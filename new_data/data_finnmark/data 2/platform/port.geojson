@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"generator": "overpass-turbo",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+"timestamp": "2025-12-01T14:20:45Z",
+"name": "port",
+"features": [
+{ "type": "Feature", "id": "node/4032547291", "properties": { "@id": "node/4032547291", "fee": "no", "leisure": "marina", "name": "Venesatama" }, "geometry": { "type": "Point", "coordinates": [ 27.649599, 69.0832884 ] } },
+{ "type": "Feature", "id": "node/4186121776", "properties": { "@id": "node/4186121776", "fee": "no", "internet_access": "no", "leisure": "marina", "name": "Venesatama", "power_supply": "no", "sanitary_dump_station": "no" }, "geometry": { "type": "Point", "coordinates": [ 27.4044398, 68.7455218 ] } },
+{ "type": "Feature", "id": "node/4187324402", "properties": { "@id": "node/4187324402", "leisure": "marina", "name": "Kalasatama" }, "geometry": { "type": "Point", "coordinates": [ 27.0196618, 68.9090706 ] } },
+{ "type": "Feature", "id": "node/4187927599", "properties": { "@id": "node/4187927599", "leisure": "marina", "name": "Venesatama" }, "geometry": { "type": "Point", "coordinates": [ 27.0203109, 68.9081443 ] } },
+{ "type": "Feature", "id": "node/6317127544", "properties": { "@id": "node/6317127544", "leisure": "marina", "name": "Nanguniemi venesatama" }, "geometry": { "type": "Point", "coordinates": [ 27.7950614, 68.8290201 ] } },
+{ "type": "Feature", "id": "node/6995762512", "properties": { "@id": "node/6995762512", "capacity": "5", "fee": "no", "leisure": "marina", "name": "Tyllylahti", "power_supply": "no", "sanitary_dump_station": "no" }, "geometry": { "type": "Point", "coordinates": [ 27.8978776, 68.9011329 ] } },
+{ "type": "Feature", "id": "node/11435386262", "properties": { "@id": "node/11435386262", "leisure": "marina", "name": "Veskoniemi kalasatama", "power_supply": "yes", "seamark:harbour:category": "marina", "seamark:type": "harbour" }, "geometry": { "type": "Point", "coordinates": [ 27.6447541, 68.785924 ] } },
+{ "type": "Feature", "id": "node/11509151448", "properties": { "@id": "node/11509151448", "leisure": "marina", "seamark:harbour:category": "marina", "seamark:type": "harbour" }, "geometry": { "type": "Point", "coordinates": [ 28.2171573, 68.8444892 ] } }
+]
+}

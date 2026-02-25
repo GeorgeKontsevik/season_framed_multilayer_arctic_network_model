@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:15:40Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/422410917",
+        "addr:city": "Ivalo",
+        "addr:postcode": "99800",
+        "addr:street": "Eetuntie",
+        "amenity": "childcare",
+        "name": "Ivalon päiväkoti",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5305943,
+          68.65836
+        ]
+      },
+      "id": "way/422410917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1234022479",
+        "addr:city": "Saariselkä",
+        "amenity": "childcare",
+        "name": "Saariselän päiväkoti",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4124655,
+          68.4108595
+        ]
+      },
+      "id": "way/1234022479"
+    }
+  ]
+}

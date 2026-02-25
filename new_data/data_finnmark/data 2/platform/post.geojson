@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:15:40Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1676021467",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "1",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "post_office",
+        "name": "Posti Utsjoki",
+        "operator": "Posti",
+        "operator:wikidata": "Q843453"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0269813,
+          69.9072656
+        ]
+      },
+      "id": "node/1676021467"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1676045476",
+        "amenity": "post_office",
+        "name": "Posti Nuorgam",
+        "operator": "Posti",
+        "ref": "99990"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8709328,
+          70.08114
+        ]
+      },
+      "id": "node/1676045476"
+    }
+  ]
+}

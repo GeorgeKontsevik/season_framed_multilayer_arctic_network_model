@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"generator": "overpass-turbo",
+"copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+"timestamp": "2025-11-22T14:36:16Z",
+"name": "atm",
+"features": [
+{ "type": "Feature", "id": "node/2185888709", "properties": { "@id": "node/2185888709", "amenity": "atm", "brand": "DNB", "brand:wikidata": "Q80788", "operator": "DNB", "operator:wikidata": "Q80788" }, "geometry": { "type": "Point", "coordinates": [ 23.2714938, 69.966773 ] } },
+{ "type": "Feature", "id": "node/3634269137", "properties": { "@id": "node/3634269137", "amenity": "atm", "opening_hours": "24/7", "operator": "SpareBank1", "snowmobile": "yes" }, "geometry": { "type": "Point", "coordinates": [ 23.0435975, 69.0118756 ] } }
+]
+}

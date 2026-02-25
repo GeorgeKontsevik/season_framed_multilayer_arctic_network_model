@@ -8,6 +8,8 @@ from transliterate import translit
 from scripts.preprocesser.constants import MINUTES_IN_HOUR
 
 def get_data(data_path, SETTL_NAME, transport_mode_name_mapper, transport_modes, SERVICE_NAME, specific_folder='processed/'):
+    specific_folder = specific_folder + SETTL_NAME + "/"
+
     settl = gpd.read_file(data_path + specific_folder+f"df_settlements_{SETTL_NAME}.geojson")
     settl["name"] = settl["name"].str.replace("ё", "е")
     settl.geometry = settl.geometry.buffer(1e3)

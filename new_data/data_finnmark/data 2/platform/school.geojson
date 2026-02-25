@@ -1,0 +1,270 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:14:35Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418308614",
+        "addr:city": "Inari",
+        "addr:housenumber": "4",
+        "addr:postcode": "99870",
+        "addr:street": "Saarikoskentie",
+        "amenity": "school",
+        "name": "Inarin koulu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0003829,
+          68.9055257
+        ]
+      },
+      "id": "way/418308614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418547590",
+        "addr:city": "Inari",
+        "amenity": "college",
+        "name": "Saamelaisalueen koulutuskeskus",
+        "website": "https://www.sogsakk.fi/",
+        "wikidata": "Q10660871",
+        "wikipedia": "fi:Saamelaisalueen koulutuskeskus",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0449967,
+          68.9180042
+        ]
+      },
+      "id": "way/418547590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418547616",
+        "addr:city": "Inari",
+        "addr:housenumber": "4",
+        "addr:postcode": "99870",
+        "addr:street": "Menesjärventie",
+        "alt_name": "SAKK / Inari",
+        "amenity": "school",
+        "name": "Saamelaisalueen koulutuskeskus",
+        "website": "https://www.sogsakk.fi/",
+        "wikidata": "Q10660871",
+        "wikipedia": "fi:Saamelaisalueen koulutuskeskus",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.9983072,
+          68.900727
+        ]
+      },
+      "id": "way/418547616"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/422255108",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "4",
+        "addr:postcode": "99800",
+        "addr:street": "Koppelontie",
+        "amenity": "school",
+        "education": "school",
+        "name": "Ivalon koulu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5483405,
+          68.6631427
+        ]
+      },
+      "id": "way/422255108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/427694782",
+        "addr:city": "Karigasniemi",
+        "addr:housenumber": "330",
+        "addr:postcode": "99950",
+        "addr:street": "Ylätenontie",
+        "amenity": "school",
+        "name": "Karigasniemen koulu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.8238454,
+          69.4230302
+        ]
+      },
+      "id": "way/427694782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/428276162",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "44",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "school",
+        "name": "Utsjokisuun koulu",
+        "name:fi": "Utsjokisuun koulu",
+        "name:se": "Ohcejohnjálmmi skuvla",
+        "note": "Utsjokisuun monitoimitalo",
+        "operator": "Utsjoen kunta",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0133133,
+          69.8959669
+        ]
+      },
+      "id": "way/428276162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/430584993",
+        "addr:city": "Nuorgam",
+        "addr:housenumber": "18",
+        "addr:postcode": "99990",
+        "addr:street": "Herrankuru",
+        "amenity": "school",
+        "name": "Nuorgamin koulu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8702338,
+          70.0823613
+        ]
+      },
+      "id": "way/430584993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/574171165",
+        "addr:city": "Sevettijärvi",
+        "addr:housenumber": "9076",
+        "addr:postcode": "99930",
+        "addr:street": "Sevettijärventie",
+        "amenity": "school",
+        "name": "Sevettijärven koulu",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.6003383,
+          69.5108869
+        ]
+      },
+      "id": "way/574171165"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4032860361",
+        "addr:city": "Kaamanen",
+        "addr:housenumber": "246",
+        "addr:postcode": "99910",
+        "addr:street": "Toivoniementie",
+        "amenity": "school",
+        "name": "SAKK / Luontaistalouden kehittämisyksikkö"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1120244,
+          69.0683739
+        ]
+      },
+      "id": "node/4032860361"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11877316529",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "4",
+        "addr:postcode": "99800",
+        "addr:street": "Koppelontie",
+        "amenity": "school",
+        "education": "school",
+        "name": "Ivalon lukio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5491236,
+          68.6628168
+        ]
+      },
+      "id": "node/11877316529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11877322941",
+        "addr:city": "Inari",
+        "addr:housenumber": "2",
+        "addr:postcode": "99870",
+        "addr:street": "Menesjärventie",
+        "amenity": "school",
+        "name": "SAKK / SAJOS",
+        "operator": "Saamelaisalueen koulutuskeskus",
+        "wikidata": "Q4405251"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0126076,
+          68.9077191
+        ]
+      },
+      "id": "node/11877322941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12645235684",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "44",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "school",
+        "name": "Utsjoen saamelaislukio",
+        "name:fi": "Utsjoen saamelaislukio",
+        "name:se": "Ohcejoga sámelogahat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0133521,
+          69.8959607
+        ]
+      },
+      "id": "node/12645235684"
+    }
+  ]
+}

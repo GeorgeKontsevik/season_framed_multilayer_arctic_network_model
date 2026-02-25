@@ -1,0 +1,357 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:17:44Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/153717837",
+        "addr:city": "Inari",
+        "addr:housenumber": "671",
+        "addr:postcode": "99800",
+        "addr:street": "Rovaniementie",
+        "addr:unit": "b",
+        "amenity": "community_centre",
+        "building": "public",
+        "name": "Seurantalo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5049653,
+          68.6089212
+        ]
+      },
+      "id": "way/153717837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/155508585",
+        "addr:city": "Inari",
+        "addr:postcode": "99870",
+        "amenity": "community_centre",
+        "building": "yes",
+        "name": "Seurantalo",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0102232,
+          68.9047245
+        ]
+      },
+      "id": "way/155508585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/163145188",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "9",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "community_centre",
+        "building": "yes",
+        "name": "Kylätalo Giisa",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.021546,
+          69.9045544
+        ]
+      },
+      "id": "way/163145188"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/177814711",
+        "addr:city": "Karigasniemi",
+        "addr:postcode": "99950",
+        "amenity": "community_centre",
+        "building": "yes",
+        "email": "saivu.kylatalo@gmail.com",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Kilidällu Säivu",
+        "name:fi": "Kylätalo Säivu",
+        "name:se": "Kilidällu Säivu",
+        "opening_hours": "Mo-Fr 10:00-17:00; Sa-Su off",
+        "operator": "Karigasniemen kyläyhdistys ry",
+        "phone": "+358 40 7286 822",
+        "website": "https://www.karigasniemi.fi/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.8453739,
+          69.3995869
+        ]
+      },
+      "id": "way/177814711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/206805911",
+        "building": "yes",
+        "name": "Sovintovaraan Huippu",
+        "tourism": "museum",
+        "url": "http://www.ivalonmaahiset.fi/index.php",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4678308,
+          68.7280363
+        ]
+      },
+      "id": "way/206805911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/247515152",
+        "name": "WW II Military Exponats (free access)",
+        "tourism": "museum",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4662356,
+          68.7266582
+        ]
+      },
+      "id": "way/247515152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/247516977",
+        "name": "Sovintovaraan Huippu (outddor exposition)",
+        "tourism": "museum",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4669302,
+          68.727394
+        ]
+      },
+      "id": "way/247516977"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/450530767",
+        "addr:city": "Inari",
+        "addr:housenumber": "46",
+        "addr:postcode": "99870",
+        "addr:street": "Inarintie",
+        "description": "Siida offers the visitor both exciting experiences that appeal to many senses and expert knowledge. In the summer season, the indoor exhibitions of Siida are complemented by the cozy open-air museum.",
+        "email": "siida@samimuseum.fi",
+        "fee": "yes",
+        "name": "Saamelaismuseo Siida",
+        "name:en": "Sámi Museum Siida",
+        "name:fi": "Siida",
+        "name:se": "Sijdâ",
+        "opening_hours": "Jun-Sep: Mo-Su 09:00-18:00; Oct-May: Mo-Sa 10:00-17:00",
+        "phone": "+358 400 898 212",
+        "tourism": "museum",
+        "website": "https://siida.fi/",
+        "wheelchair": "yes",
+        "wikidata": "Q946264"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0133963,
+          68.9108769
+        ]
+      },
+      "id": "node/450530767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4032961933",
+        "addr:city": "Sevettijärvi",
+        "addr:housenumber": "9041",
+        "addr:postcode": "99930",
+        "addr:street": "Sevettijärventie",
+        "description": "The Skolt Sámi Heritage House operates in an old Skolt Sámi homestead, that is, in a “Skolt home” and its outbuilding. In addition to the Heritage House, there is an open-air museum. ",
+        "name": "Kolttien perinnetalo",
+        "name:en": "Skolt Sámi Heritage House",
+        "name:smn": "Nuorttâlij ärbivyehitáálu",
+        "tourism": "museum",
+        "wikidata": "Q38379742"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.5942732,
+          69.5092881
+        ]
+      },
+      "id": "node/4032961933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4274240787",
+        "addr:city": "Utsjoki",
+        "name": "Kirkkotuvat",
+        "tourism": "museum",
+        "website": "https://retkipaikka.fi/vapaa/utsjoen-kirkkotuvat/",
+        "wikidata": "Q18693983",
+        "wikipedia": "fi:Kirkkotupa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.008751,
+          69.8633723
+        ]
+      },
+      "id": "node/4274240787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4275771840",
+        "addr:city": "Inari",
+        "addr:postcode": "99870",
+        "name": "Saamelaismuseon ulkomuseo",
+        "tourism": "museum",
+        "website": "https://siida.fi/sisalto/ulkomuseo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0150446,
+          68.9113088
+        ]
+      },
+      "id": "node/4275771840"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4279143698",
+        "name": "Pahaojan Kultala",
+        "opening_hours": "24/7",
+        "operator": "Metsähallitus",
+        "tourism": "museum",
+        "website": "http://www.luontoon.fi/hammastunturi/historiajanahtavyydet/ivalojoenkultakohteet#hammastunturipahaojankultala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.8603214,
+          68.4486834
+        ]
+      },
+      "id": "node/4279143698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5062474710",
+        "amenity": "cinema",
+        "name": "Elokuvateatteri Aslak",
+        "opening_hours:url": "https://www.inari.fi/fi/palvelut/sivistyspalvelut/kulttuuri/aslak.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5412297,
+          68.6543564
+        ]
+      },
+      "id": "node/5062474710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922147643",
+        "name": "Kaapin Jounin kenttä",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1973367,
+          68.75939
+        ]
+      },
+      "id": "node/5922147643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12144440707",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0128507,
+          69.8945043
+        ]
+      },
+      "id": "node/12144440707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12645235687",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "46 C",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "cinema",
+        "name": "Davvenásti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0137556,
+          69.8946228
+        ]
+      },
+      "id": "node/12645235687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13272367602",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "4",
+        "addr:postcode": "99800",
+        "addr:street": "Koppelontie",
+        "amenity": "cinema",
+        "name": "Elokuvateatteri Kaarre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5490533,
+          68.6626581
+        ]
+      },
+      "id": "node/13272367602"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:19:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/163125129",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "1",
+        "addr:postcode": "99980",
+        "addr:street": "Seitatie",
+        "amenity": "clinic",
+        "building": "hospital",
+        "healthcare": "clinic",
+        "source": "Bing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0167512,
+          69.9007626
+        ]
+      },
+      "id": "way/163125129"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/398531218",
+        "addr:city": "Ivalo",
+        "addr:country": "FI",
+        "addr:housenumber": "15",
+        "addr:postcode": "99800",
+        "addr:street": "Sairaalantie",
+        "amenity": "clinic",
+        "emergency": "yes",
+        "healthcare": "clinic",
+        "name": "Ivalon terveyskeskus",
+        "operator": "Lapin hyvinvointialue",
+        "operator:type": "public",
+        "website": "https://www.inari.fi/fi/yhteystiedot/sosiaali-ja-terveysosasto/ivalon-terveyskeskus.html",
+        "wikidata": "Q97625461",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5242512,
+          68.656659
+        ]
+      },
+      "id": "way/398531218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/428276154",
+        "addr:city": "Utsjoki",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Utsjoen terveyskeskus",
+        "phone": "+358 40 181 0285",
+        "snowmobile": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0164885,
+          69.9008515
+        ]
+      },
+      "id": "way/428276154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4268829318",
+        "addr:city": "Karigasniemi",
+        "addr:postcode": "99950",
+        "amenity": "clinic",
+        "name": "Tereveyskeskus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.8374889,
+          69.4058508
+        ]
+      },
+      "id": "node/4268829318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5062474709",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "10",
+        "addr:postcode": "99800",
+        "addr:street": "Ivalontie",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Ivalon apteekki",
+        "name:fi": "Ivalon apteekki",
+        "opening_hours": "Mo 09:00-18:00; Tu-Th 09:00-17:00; Fr 09:00-18:00; Sa 10:00-14:00",
+        "phone": "+358102817215",
+        "website": "https://www.ivalonapteekki.fi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5391982,
+          68.6568793
+        ]
+      },
+      "id": "node/5062474709"
+    }
+  ]
+}

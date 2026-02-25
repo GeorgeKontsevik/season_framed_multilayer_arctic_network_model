@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "library",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "node/1346023498", "@id": "node/1346023498", "access": "yes", "air_conditioning": null, "amenity": "library", "building": null, "fixme": null, "name": "Alta bibliotek", "name:en": null, "name:fkv": null, "name:nb": null, "name:no": null, "name:se": null, "opening_hours": "Mo, Tu, Th 10:00-19:00; We, Fr 10:00-16:00; Sa 11:00-15:00; Su off", "operator": null, "phone": "+47 78 45 58 50", "ref:bygningsnr": null, "ref:isil": "NO-2201200", "website": "http://www.alta.folkebibl.no/", "wheelchair": null, "layer": "library", "path": "D:/Project/Arctic/model/data/platform/library.geojson|geometrytype=Point" }, "geometry": { "type": "Point", "coordinates": [ 23.2751665, 69.966651 ] } },
+{ "type": "Feature", "properties": { "id": "node/6244921049", "@id": "node/6244921049", "access": "yes", "air_conditioning": null, "amenity": "library", "building": null, "fixme": null, "name": "Guovdageainnu álbmotgirjerájus - Kautokeino folkebibliotek", "name:en": null, "name:fkv": null, "name:nb": "Kautokeino folkebibliotek", "name:no": null, "name:se": "Guovdageainnu álbmotgirjerájus", "opening_hours": null, "operator": null, "phone": "+47 454 00 933", "ref:bygningsnr": null, "ref:isil": "NO-2201100", "website": "http://www.fm.fylkesbibl.no/web/index.php/folkebibliotek/57-folkebibliotek/19-kautokeino-bibliotek", "wheelchair": null, "layer": "library", "path": "D:/Project/Arctic/model/data/platform/library.geojson|geometrytype=Point" }, "geometry": { "type": "Point", "coordinates": [ 23.0572535, 69.018754 ] } }
+]
+}

@@ -21,7 +21,7 @@ parameters = "T2M"
 transport_modes_color = {
     "Aviation": "#BF616A",
     "Regular road": "#EBCB8B",
-    "Winter road": "#A3BE8C",
+    "Winter road": "#3469A2",
     "Water transport": "#B48EAD",
     # "Winter road (regular)": "#A3BE8C",
     # "Water transport (ship)": "#B48EAD",

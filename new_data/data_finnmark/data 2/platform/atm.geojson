@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:16:41Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1662566854",
+        "addr:city": "Ivalo",
+        "addr:country": "FI",
+        "addr:housenumber": "4",
+        "addr:postcode": "99800",
+        "addr:street": "Ivalontie",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Ivalo",
+        "brand": "Osuuspankki",
+        "brand:wikidata": "Q4045597",
+        "name": "Osuuspankki",
+        "opening_hours": "\"Mo-Fr 10:00-16:00 by appointment\"",
+        "operator": "Osuuspankki"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5388163,
+          68.658572
+        ]
+      },
+      "id": "node/1662566854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1663104482",
+        "addr:city": "Ivalo",
+        "addr:country": "FI",
+        "addr:housenumber": "12",
+        "addr:postcode": "99800",
+        "addr:street": "Ivalontie",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "Nordea Ivalo",
+        "opening_hours": "\"by appointment on tuesdays and thursdays\"",
+        "operator": "Nordea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5396088,
+          68.6561877
+        ]
+      },
+      "id": "node/1663104482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6844074909",
+        "amenity": "atm",
+        "check_date": "2022-06-13",
+        "drive_through": "no",
+        "level": "1",
+        "network": "OttoPlus",
+        "opening_hours": "24/7",
+        "operator": "OttoPlus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.538873,
+          68.6586074
+        ]
+      },
+      "id": "node/6844074909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11476339857",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4200971,
+          68.4197442
+        ]
+      },
+      "id": "node/11476339857"
+    }
+  ]
+}

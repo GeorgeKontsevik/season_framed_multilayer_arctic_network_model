@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-12-01T14:19:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/242849862",
+        "addr:city": "Ivalo",
+        "addr:housenumber": "4",
+        "addr:postcode": "99800",
+        "addr:street": "Piiskuntie",
+        "amenity": "library",
+        "building": "yes",
+        "check_date": "2025-08-28",
+        "email": "kirjasto@inari.fi",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Inarin kunnankirjasto - Ivalon kirjasto",
+        "name:en": "Inari municipal library - Ivalo",
+        "name:ru": "Муниципальная библиотека Инари - Ивало",
+        "name:se": "Anára gielddagirjerádju - Avvil",
+        "name:smn": "Aanaar kieldâkirjerááju - Avveel",
+        "name:sms": "Aanar kåʹddǩeʹrjjpõrtt - Âʹvvel",
+        "name:sv": "Enare kommunalt bibliotek - Ivalo",
+        "opening_hours": "\"Mo-Th self-service 08:00-10:00,19:00-21:00, customer service 10:00-19:00;Fr self-service 08:00-10:00,17:00-21:00, customer service 10:00-17:00;Sa self-service 08:00-17:00;Su off\"",
+        "operator": "Lapin kirjasto",
+        "phone": "040 745 1988",
+        "website": "https://lapinkirjasto.finna.fi/OrganisationInfo/Home#85056",
+        "wikidata": "Q34192339",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5465004,
+          68.6578435
+        ]
+      },
+      "id": "way/242849862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/315326477",
+        "amenity": "library",
+        "building": "shed",
+        "building:levels": "1",
+        "height": "3",
+        "name": "KarhuKorhosen Kirjasto",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7513523,
+          68.7115344
+        ]
+      },
+      "id": "way/315326477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/315326479",
+        "amenity": "library",
+        "building": "yes",
+        "name": "KarhuKorhosen Kirjasto",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.7060766,
+          68.6603812
+        ]
+      },
+      "id": "way/315326479"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7166651051",
+        "addr:city": "Inari",
+        "addr:housenumber": "2",
+        "addr:postcode": "99870",
+        "addr:street": "Menesjärventie",
+        "addr:unit": "A",
+        "amenity": "library",
+        "email": "saamikirjasto@inari.fi",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Inarin Saamelaiskirjasto",
+        "name:en": "Sámi Library Inari",
+        "name:fi": "Inarin Saamelaiskirjasto",
+        "name:sv": "Samer bibliotek Inari",
+        "operator": "Lapin kirjasto",
+        "phone": "040 592 9915",
+        "website": "https://lapinkirjasto.finna.fi/OrganisationInfo/Home#85310",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0134457,
+          68.907713
+        ]
+      },
+      "id": "node/7166651051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12144440708",
+        "addr:city": "Utsjoki",
+        "addr:housenumber": "48 A",
+        "addr:postcode": "99980",
+        "addr:street": "Utsjoentie",
+        "amenity": "library",
+        "name": "Pedar Jalvi -pääkirjasto",
+        "name:fi": "Pedar Jalvi -pääkirjasto",
+        "name:se": "Pedar Jalvi -girjerádju",
+        "phone": "+358 40 181 0261",
+        "website": "https://www.utsjoki.fi/kirjasto",
+        "wikidata": "Q34945255",
+        "wikipedia": "fi:Pedar Jalvi -kirjasto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0136479,
+          69.8939432
+        ]
+      },
+      "id": "node/12144440708"
+    }
+  ]
+}
